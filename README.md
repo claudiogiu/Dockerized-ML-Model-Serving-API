@@ -14,17 +14,17 @@ To ensure seamless deployment and reproducibility, the application is containeri
 To set up the repository properly, follow these steps:  
 
 **1.** **Create the Data Directory**  
-   - Before running the pipeline, create a `/data` folder in the project root.  
-   - Inside `/data`, create two subdirectories:  
-     - `/raw`: This will store the unprocessed dataset.  
-     - `/processed`: The data will be split into **training and test sets** and saved here.
+   - Before running the pipeline, create a `data/` folder in the project root.  
+   - Inside `data/`, create two subdirectories:  
+     - `raw/`: This will store the unprocessed dataset.  
+     - `processed/`: The data will be split into **training and test sets** and saved here.
   
 
 **2.** **Run the ML Pipeline**  
-   - The `/src` folder contains modular components to execute the pipeline step by step:  
+   - The `src/` folder contains modular components to execute the pipeline step by step:  
      - `load_data.py`: Ingests the data.  
-     - `preprocess.py`: Stores the trained scaler and PCA models in `/models` for reuse in inference.  
-     - `train_model.py`: Stores the trained model in `/models` for reuse in inference.  
+     - `preprocess.py`: Stores the trained scaler and PCA models in `models/` for reuse in inference.  
+     - `train_model.py`: Stores the trained model in `models/` for reuse in inference.  
      - `evaluate_model.py`: Computes metrics to validate the model's performance.  
 
 **3.** **Deploy the API**  
