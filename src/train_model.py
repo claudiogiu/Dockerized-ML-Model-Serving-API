@@ -42,7 +42,7 @@ def train_model(X_train: pd.DataFrame, y_train: pd.DataFrame):
     X_train_transformed = pca.transform(X_train_scaled)
 
     # Train the SVM model
-    svc = SVC(C=1, kernel='rbf', gamma='scale')
+    svc = SVC(C=0.1, kernel='rbf', gamma='scale')
     svc.fit(X_train_transformed, y_train_resampled)
 
     # Save the trained SVM model
